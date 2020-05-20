@@ -76,4 +76,10 @@ transformer = ColumnTransformer(
 X = transformer.fit_transform(X.tolist())
 X = X.astype('float64')"""
 
+"""from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+labelencoder_X = LabelEncoder()
+X[:, 3] = labelencoder_X.fit_transform(X[:, 3])
+onehotencoder = OneHotEncoder()
+X = onehotencoder.fit_transform(X).toarray()"""
+
 
