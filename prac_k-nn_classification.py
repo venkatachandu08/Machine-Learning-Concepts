@@ -69,3 +69,21 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
+
+
+#Encoding Categorical Data in Spyder4
+"""from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+labelencoder_X = LabelEncoder()
+X[:, 3] = labelencoder_X.fit_transform(X[:, 3])
+transformer = ColumnTransformer(
+    transformers=[
+        ("OneHot",        # Just a name
+         OneHotEncoder(), # The transformer class
+         [3]              # The column(s) to be applied on.
+         )
+    ],
+    remainder='passthrough' # donot apply anything to the remaining columns
+)
+X = transformer.fit_transform(X.tolist())
+X = X.astype('float64')"""
