@@ -36,3 +36,28 @@ plt.title('Clusters of clients')
 plt.xlabel('Annual Income(K$)')
 plt.ylabel('Spending Score(1-100)')
 plt.show()
+
+# Feature Scaling
+"""from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test = sc_X.transform(X_test)
+sc_y = StandardScaler()
+y_train = sc_y.fit_transform(y_train.reshape(-1,1))"""
+
+#Encoding Categorical Data in Spyder4
+"""from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+labelencoder_X = LabelEncoder()
+X[:, 3] = labelencoder_X.fit_transform(X[:, 3])
+transformer = ColumnTransformer(
+    transformers=[
+        ("OneHot",        # Just a name
+         OneHotEncoder(), # The transformer class
+         [3]              # The column(s) to be applied on.
+         )
+    ],
+    remainder='passthrough' # donot apply anything to the remaining columns
+)
+X = transformer.fit_transform(X.tolist())
+X = X.astype('float64')"""
